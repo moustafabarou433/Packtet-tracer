@@ -1,0 +1,378 @@
+Kabels copper cross 
+
+Vlan commands ( MLS )
+Vlan 10
+Name vlan10
+Vlan 20
+Name vlan20
+Vlan 30
+Name vlan30
+Vlan 40
+Name vlan40
+Vlan 50
+Name vlan50
+Vlan 99
+Name vlan99
+
+Spannings tree - (MLS)
+spanning-tree vlan 1-100 root primary
+spanning-tree vlan 1-100 priority 4096
+
+Switchport access command ( P_SW1
+
+interface FastEthernet0/1
+ description Vlan 10
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/2
+ description Vlan 10
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/3
+ description Vlan 10
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/4
+ description Vlan 10
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/5
+ description Vlan 10
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/6
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/7
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/8
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/9
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/10
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/11
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/12
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/13
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/14
+ description vlan 20
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/15
+ description vlan 30
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/16
+ description vlan 30
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/17
+ description vlan 30
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/18
+ description vlan 30
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/19
+ description vlan 40
+ switchport access vlan 40
+ switchport mode access
+!
+interface FastEthernet0/20
+ description vlan 99
+ switchport access vlan 99
+ switchport mode access
+!
+interface FastEthernet0/21
+ description vlan 99
+ switchport access vlan 99
+ switchport mode access
+!
+interface FastEthernet0/22
+ description vlan 99
+ switchport access vlan 99
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description vlan 50
+ switchport access vlan 50
+ switchport mode access
+
+
+
+
+P_SW1
+spanning-tree vlan 1-100 priority 8192
+
+P_SW2
+spanning-tree vlan 1-100 priority 12288
+
+P_SW3
+spanning-tree vlan 1-100 priority 16384
+
+P_SW4
+spanning-tree vlan 1-100 priority 20480
+
+P_SW5
+spanning-tree vlan 1-100 priority 24576
+
+
+ 
+ 
+
+P_SW1
+interface FastEthernet0/23
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ P_SW2
+ interface FastEthernet0/23
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ P_SW3
+ interface FastEthernet0/23
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ P_SW4
+ interface FastEthernet0/23
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ P_SW5
+ interface FastEthernet0/23
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ 
+ MLS 
+ interface GigabitEthernet1/0/1
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/4
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/5
+ switchport trunk native vlan 99
+ switchport mode trunk
+ 
+ Access point Config ( ON AUTO )
+ WPA2 - P@ssw0rdvlan nummer erachter
+ 
+ Laptops kaart - WPC300N  ERIN ZETTEN
+ 
+ IP Adress in printers subnetmas 255.255.255.0 172.16.10.10 
+ default getaway 17.16.10.1 dns 11.11.11.14 overal
+ 
+ 
+DHCP client command P_Edge
+
+
+ip add 10.1.1.1 255.255.255.252
+
+interface gi 0/0/1 
+description DHCP Client
+ip address ?
+  A.B.C.D  IP address
+  dhcp     IP Address negotiated via DHCP
+ip address DHCP
+no shut
+
+MLS IP ADD
+ip add 10.1.1.2 255.255.255.252
+
+ip helper-address 11.11.11.14 om op de server te komen (MLS) 
+
+int vlan 10 t/m 99
+ip add 172.16.99.1 255.255.255.0
+ip helper-a
+ip helper-address 11.11.11.14
+
+
+MLS
+ip dhcp excluded-address 172.16.10.0 172.16.10.49
+ip dhcp excluded-address 172.16.20.0 172.16.20.49
+ip dhcp excluded-address 172.16.30.0 172.16.30.49
+ip dhcp excluded-address 172.16.40.0 172.16.40.49
+ip dhcp excluded-address 172.16.50.0 172.16.50.49
+ip dhcp excluded-address 172.16.99.0 172.16.99.49
+
+
+ip dhcp pool VLAN10 t/m 99 (IP Adressen veranderen )
+ network 172.16.10.0 255.255.255.0
+ default-router 172.16.10.1
+ dns-server 11.11.11.14
+ 
+ ip dhcp pool VLAN20
+ network 172.16.20.0 255.255.255.0
+ default-router 172.16.20.1
+ dns-server 11.11.11.14
+
+ip dhcp pool VLAN30
+ network 172.16.30.0 255.255.255.0
+ default-router 172.16.30.1
+ dns-server 11.11.11.14
+
+ip dhcp pool VLAN40
+ network 172.16.40.0 255.255.255.0
+ default-router 172.16.40.1
+ dns-server 11.11.11.14
+
+ip dhcp pool VLAN50
+ network 172.16.50.0 255.255.255.0
+ default-router 172.16.50.1
+ dns-server 11.11.11.14
+
+ip dhcp pool VLAN99
+ network 172.16.99.0 255.255.255.0
+ default-router 172.16.99.1
+ dns-server 11.11.11.14
+!
+
+ISP - P Edge
+
+int gi 0/0/0 
+no shut
+end
+
+
+	
+config t
+
+int
+interface gi
+interface gigabitEthernet 0/0/1
+no shut
+des
+#description DHCP Client van ISP
+ip add
+ip address ?
+  A.B.C.D  IP address
+  dhcp     IP Address negotiated via DHCP
+ip address DHCP
+
+
+
+Router0 isp
+
+ISP(config)#int gi 0/0/0 
+ISP(config-if)#des
+ISP(config-if)#description verbinding met P edge
+ISP(config-if)#ip add 12.12.12.1 255.255.255.0
+ISP(config-if)#no shut
+ISP(config-if)#int gi 0/0/2 
+ISP(config-if)#des
+ISP(config-if)#description Lan Arnhem met webserver
+ISP(config-if)#ip add 11.11.11.1 255.255.255.0
+ISP(config-if)#
+
+
+P_Edge
+ip route 172.16.10.0 255.255.255.0 10.1.1.2 
+ip route 172.16.20.0 255.255.255.0 10.1.1.2 
+ip route 172.16.30.0 255.255.255.0 10.1.1.2 
+ip route 172.16.40.0 255.255.255.0 10.1.1.2 
+ip route 172.16.50.0 255.255.255.0 10.1.1.2 
+ip route 172.16.99.0 255.255.255.0 10.1.1.2 
+
+
