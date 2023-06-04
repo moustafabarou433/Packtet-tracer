@@ -1,0 +1,34 @@
+Aantekeningen Cybersecurity:
+
+Email:
+
+Volgens de AVG wetgeving moet een datalek gemeld worden aan externe partijen.
+In de email moeten de vervolgacties vermeld worden.
+Specificeer dat er 0-1000 records zijn gelekt van de apotheek.
+Management Samenvatting:
+
+De oorzaak van het datalek was dat de virus scanner en firewall waren uitgeschakeld.
+Het wachtwoord in de database was te makkelijk te achterhalen.
+Logboek problemen en oplossingen:
+
+Beschrijf de problemen in het logboek.
+Vermeld hoe je de problemen hebt opgelost.
+Oorzaken:
+
+Het datalek werd veroorzaakt doordat het virus binnenkwam terwijl de antivirus software was uitgeschakeld en de firewall niet actief was.
+Het wachtwoord voor de database was eenvoudig te raden omdat het een standaard wachtwoord was.
+Tips:
+
+Toon zwakheden en geef aan hoe je deze kunt oplossen in je logboek.
+Vermeld in de email dat er sprake is van een datalek en dat dit volgens de AVG gemeld moet worden.
+Meld alleen het datalek aan interne partijen.
+Verbeterpunten:
+
+Zorg ervoor dat in het examen duidelijk wordt getoond dat de firewall was uitgeschakeld.
+Zorg dat het logboek de vervolgacties duidelijk vermeldt.
+Risico matrix:
+
+Maak een overzicht van de risico's in een risico matrix.
+Bijlage zwakheden:
+
+Voeg een bijlage toe waarin de zwakheden worden beschreven.
